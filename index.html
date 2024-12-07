@@ -1,0 +1,97 @@
+<body class="login-form">
+<div class="login-box">
+    <div class="form-content">
+        <div id="login-for">
+            <form method="post" action="login.php">
+                <div class="text">
+                    <h2 class="login-h2">Log in</h2>
+                </div>
+                <div class="form-group">
+                    <input class="name" name="name" placeholder="Name or ID">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="password" name="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Login" class="login">
+                </div>
+                <div class="sing-up-button"></div>
+            </form>
+        </div>
+
+        <div id="signup-for">
+            <form method="post" action="signup.php">
+                <div class="text">
+                    <h2 class="login-h2">Sign up</h2>
+                </div>
+                <div class="form-group">
+                    <input class="name" name="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="password" name="password" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Sign Up" class="login">
+                </div>
+                <div class="sing-up-button">
+                    <a class="singUp-button" href="#">log in</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="radio-buttons">
+        <input type="radio" name="formToggle" id="login" checked>
+        <input type="radio" name="formToggle" id="signup">
+    </div>
+</div>
+</body>
+
+<style>
+    /* Stil za login-box sa flexbox rasporedom */
+    .login-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 500px;
+        height: 600px;
+        padding: 20px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        border-radius: 50px;
+        position: relative;
+    }
+
+    /* Sadržaj forme */
+    .form-content {
+        flex: 1; /* Pomaže da zauzme prostor iznad radio dugmadi */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Dodaje razmak između formi */
+    }
+
+    /* Stil za kontejner radio dugmadi */
+    .radio-buttons {
+        display: flex;
+        justify-content: center;
+        margin-top: auto; /* Postavlja radio dugmadi na dno */
+    }
+
+    /* Pozicioniranje i stil za radio dugmadi */
+    input[type="radio"] {
+        margin: 0 10px; /* Razmak između radio dugmadi */
+    }
+
+    /* Prikazivanje samo Login forme kada je "Log In" radio dugme izabrano */
+    #login:checked ~ #login-for {
+        display: block;
+    }
+
+    /* Prikazivanje samo Sign Up forme kada je "Sign Up" radio dugme izabrano */
+    #signup:checked ~ #signup-for {
+        display: block;
+    }
+
+
+</style>
+
